@@ -1,0 +1,15 @@
+.vscode/
+tmp/
+.venv/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+reports/
+.idea/
+dist/
+requirements.txt
+.ipynb_checkpoints
+.env
+*.pyc
+*.pyo
+*.pyd

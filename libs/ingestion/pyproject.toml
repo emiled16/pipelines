@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "ingestion"
+version = "0.1.0"
+description = ""
+authors = ["Emile Dimas <emiled16@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "ingestion", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+sqlalchemy = { version = "^2.0.41", optional = true }
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.15.7"
+pytest = "^9.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+sqlalchemy = ["sqlalchemy"]
+
+
+[tool.pytest.ini_options]
+python_functions = [
+    "test_*"
+]
+markers = [
+    "slow: marks tests that load the model artifact (deselect with '-m \"not slow\"')",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
