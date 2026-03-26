@@ -28,6 +28,6 @@
 | `patents` | PatentsView API | `https://patentsview.org/apis/api-endpoints` |
 | `safecast_radiation` | Safecast | `https://safecast.org/` |
 | `telegram_channels` | Telegram channels | `https://telegram.org/` |
-| `kiwisdr_receivers` | KiwiSDR | `https://kiwisdr.com/public/` |
+| `kiwisdr_receivers` | KiwiSDR | `https://rx.kiwisdr.com/` |
 | `polymarket_markets` | Polymarket Gamma API | `https://gamma-api.polymarket.com/` |
 | `polymarket_quotes` | Polymarket CLOB API | `https://docs.polymarket.com/` |
