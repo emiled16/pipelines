@@ -33,6 +33,10 @@ markers = [
 
 [tool.ruff]
 line-length = 100
+fix = true
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ingestion"]

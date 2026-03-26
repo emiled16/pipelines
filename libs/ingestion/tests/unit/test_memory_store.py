@@ -1,15 +1,21 @@
 from __future__ import annotations
 
 import asyncio
+from dataclasses import dataclass
 
-from ingestion.models import CursorCheckpoint, Record
-from ingestion.stores import InMemoryCheckpointStore, InMemoryRecordSink
+from ingestion.models.record import Record
+from ingestion.stores.memory import InMemoryCheckpointStore, InMemoryRecordSink
+
+
+@dataclass(slots=True, frozen=True)
+class MemoryCheckpoint:
+    value: str
 
 
 def test_memory_checkpoint_store_round_trips_values() -> None:
     async def run() -> None:
-        store = InMemoryCheckpointStore[CursorCheckpoint]()
-        checkpoint = CursorCheckpoint(value="cursor-1")
+        store = InMemoryCheckpointStore[MemoryCheckpoint]()
+        checkpoint = MemoryCheckpoint(value="cursor-1")
 
         await store.save("rss:feed", checkpoint)
 

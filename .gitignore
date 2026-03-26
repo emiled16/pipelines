@@ -13,3 +13,4 @@ requirements.txt
 *.pyc
 *.pyo
 *.pyd
+*.db

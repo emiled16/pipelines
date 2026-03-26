@@ -2,12 +2,10 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Any
 
-
-def utc_now() -> datetime:
-    return datetime.now(timezone.utc)
+from ingestion.utils.time import utc_now
 
 
 @dataclass(slots=True, frozen=True)

@@ -3,7 +3,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from collections.abc import Iterable
 
-from ingestion.models import Record, WriteResult
+from ingestion.models.record import Record, WriteResult
 
 
 class RecordSink(ABC):

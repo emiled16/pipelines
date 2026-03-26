@@ -1,11 +1,10 @@
 from __future__ import annotations
 
-from typing import Generic, TypeVar
+from typing import Generic
 
-from ingestion.abstractions import CheckpointStore, RecordSink
-from ingestion.models import Record
-
-CheckpointT = TypeVar("CheckpointT")
+from ingestion.abstractions.checkpoint_store import CheckpointStore, CheckpointT
+from ingestion.abstractions.sink import RecordSink
+from ingestion.models.record import Record
 
 
 class InMemoryCheckpointStore(CheckpointStore[CheckpointT], Generic[CheckpointT]):
